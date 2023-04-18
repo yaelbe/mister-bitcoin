@@ -101,14 +101,17 @@ export function ContactEdit() {
 					{contact._id ? 'Save' : 'Add'}
 				</button>
 			</form>
-
-			<button className="round" onClick={onBack}>
-				<i className="fa-solid fa-arrow-left-long" />
-			</button>
-			{contact._id && (
-				<button className="round right" onClick={onRemoveContact}>
-					<i className="fa-solid fa-trash"></i>
+			<div className="button-container">
+				<button className="round" onClick={onBack}>
+					<i className="fa-solid fa-arrow-left-long" />
 				</button>
+			</div>
+			{contact._id && (
+				<div className="button-container">
+					<button className="round right" onClick={onRemoveContact}>
+						<i className="fa-solid fa-trash"></i>
+					</button>
+				</div>
 			)}
 		</section>
 	)
