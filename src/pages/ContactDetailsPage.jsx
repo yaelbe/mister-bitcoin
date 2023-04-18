@@ -68,9 +68,11 @@ export function ContactDetailsPage(props) {
 			<Link className="round right" to={`/contact/edit/${contact._id}`}>
 				<i className="fa-solid fa-pen"></i>
 			</Link>
-			<button className="round" onClick={onBack}>
-				<i className="fa-solid fa-arrow-left-long" />
-			</button>
+			<div className="button-container">
+				<button className="round" onClick={onBack}>
+					<i className="fa-solid fa-arrow-left-long" />
+				</button>
+			</div>
 		</section>
 	)
 }
