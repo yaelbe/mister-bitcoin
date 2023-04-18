@@ -1,0 +1,36 @@
+.signup-container {
+	min-height: 70vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	form {
+		align-items: center;
+		justify-content: center;
+		img {
+			width: 100px;
+			height: 100px;
+		}
+		input {
+			width: 100%;
+			border: 1px solid lightgray;
+			border-radius: 555px;
+			padding: 6px 12px;
+		}
+		button {
+			display: flex;
+			gap: 0.5rem;
+			justify-content: center;
+			align-items: center;
+			width: 50%;
+			margin-top: 40px;
+			align-self: center;
+			background-color: #03a9f4;
+			padding: 10px;
+			border: 1px solid lightgray;
+			border-radius: 555px;
+			margin: 0;
+			color: white;
+		}
+	}
+}

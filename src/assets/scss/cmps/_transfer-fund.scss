@@ -1,0 +1,135 @@
+.transfer-fund {
+	// margin: 2rem;
+	background: whitesmoke;
+	// margin-block-start: auto;
+	width: 350px;
+	padding: 6px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	box-shadow: inset 1px 1px 0 white;
+	background-image: linear-gradient(90deg, #03a9f4 10px, #eee 10px, #eee 11px, transparent 11px);
+
+	h1 {
+		font-weight: 600;
+	}
+
+	.transfer-amount {
+		display: flex;
+		gap: 0.5rem;
+		align-items: center;
+
+		input {
+			flex-grow: 1;
+			border-radius: 555px;
+			border: 1px solid lightgray;
+		}
+
+		button {
+			border-radius: 50%;
+			background-color: #03a9f4;
+
+			border: 1px solid lightgrey;
+			height: 40px;
+			width: 40px;
+			color: white;
+
+			left: 18px;
+			top: 0;
+			font-size: 1.5rem;
+		}
+
+		.btn-container {
+			width: 40px;
+			height: 40px;
+		}
+
+		.circle {
+			display: block;
+			position: absolute;
+			top: -4px;
+			left: -4px;
+			width: 40px;
+			height: 40px;
+			stroke-dasharray: 1000px;
+			stroke-dashoffset: 0;
+			transform-origin: 50% 50%;
+			transition: all 0.8s linear 0.2s, opacity 0s linear 0s;
+		}
+
+		.button-play {
+			display: block;
+			position: relative;
+			border: 2px solid white;
+			box-shadow: 0 4px 6px -3px rgba(black, 0.3), inset 0 3px 4px -2px rgba(black, 0.25);
+			position: relative;
+			width: 40px;
+			height: 40px;
+			background: #03a9f4;
+			// background-image: linear-gradient(120deg, rgba(lighten(grey, 15%), 0.3) 50%, grey 51%);
+			border-radius: 50%;
+			transition: all 0.2s cubic-bezier(0.68, -0.55, 0.465, 1.55) 0.2s,
+				border-width 0.4s cubic-bezier(0.68, -0.55, 0.465, 1.55);
+
+			&:before {
+				display: block;
+				position: absolute;
+				content: '✓';
+				bottom: 50%;
+				left: 50%;
+				transform: translate(-13px, 50%);
+			}
+
+			&:hover,
+			&.active {
+				border: 4px solid white;
+				.circle {
+					stroke-dasharray: -1000px;
+					stroke-dashoffset: -500px;
+					opacity: 0;
+					transition: all 2s linear 0.3s, opacity 0.1s linear 2s;
+				}
+
+				&:before {
+					animation: playJump 0.5s linear infinite;
+				}
+			}
+		}
+
+		@keyframes playJump {
+			0% {
+				transform: translate(-13px, 60%) scale(1.1, 0.7);
+			}
+			10% {
+				transform: translate(-13px, 30%) scale(0.9, 1.2);
+			}
+			20% {
+				transform: translate(-13px, 15%);
+			}
+			40% {
+				transform: translate(-13px, 10%);
+			}
+			// 45%  { top: 160px; height: 40px; width: 60px; margin-left: -30px; }
+			50% {
+				transform: translate(-13px, 10%);
+			}
+			55% {
+				transform: translate(-13px, 18%);
+			}
+			60% {
+				transform: translate(-13px, 20%);
+			}
+			65% {
+				transform: translate(-13px, 25%);
+			}
+			70% {
+				transform: translate(-13px, 30%);
+			}
+			90% {
+				transform: translate(-13px, 60%) scale(1.2, 0.7);
+			}
+			100% {
+				transform: translate(-13px, 60%) scale(1.4, 0.7);
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+.user-data {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+	line-height: 2rem;
+	img {
+		width: 20px;
+		height: 20px;
+	}
+}
+
+.home-container {
+	h3 {
+		padding: 12px 0;
+	}
+	.bold {
+		font-weight: 700;
+	}
+}
